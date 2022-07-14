@@ -16,10 +16,11 @@
     font: inherit;
     padding: 0.5rem;
     border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 20rem;
+    border: 1px solid #eee;
+    width: 15.2rem;
     max-width: 100%;
-  }
+    border: 1px solid #eee;
+}
   
   .new-expense__actions {
     text-align: right;
