@@ -1,27 +1,31 @@
-
+import { useState } from "react";
 import ExpenseDate from "../../expenses/expense-date/ExpenseDate";
 import Card from "../../card/Card";
 import "./ExpenseItem.css";
 
+function ExpenseItem(props) {
+ 
+  // Must be called directly in the sub-component function. 
+  // Always returns two elements (1st - current state value, 2nd - updating the value)
 
+  const [title, setTitle] = useState(props.title); 
+  console.log('ExpenseItem evaluated');
+  const onClickHandler = () => {setTitle('Updated!');};
+  console.log(title)
 
- function ExpenseItem(props) {
-    return (
-      <Card className="expense-item">
-        <ExpenseDate date={props.date} />
-        <div className="expense-item__description">
-          <h2>{props.title}</h2>
-        </div>
-        <div className="expense-item__restaurant__name">
-          <h2>{props.restaurant}</h2>
-        </div>
-        <div className="expense-item__price">${props.amount}</div>
-      </Card>
-    );
-  }
-  
+  return (
+    <Card className="expense-item">
+      <ExpenseDate date={props.date} />
+      <div className="expense-item__description">
+        <h2>{title}</h2>
+      </div>
+      <div className="expense-item__restaurant__name">
+        <h2>{props.restaurant}</h2>
+      </div>
+      <div className="expense-item__price">${props.amount}</div>
+      <button onClick={onClickHandler}>Change Title </button>
+    </Card>
+  );
+}
 
-export default ExpenseItem
-
-
-
+export default ExpenseItem;
