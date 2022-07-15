@@ -2,17 +2,21 @@ import { useState } from "react";
 import ExpenseDate from "../../expenses/expense-date/ExpenseDate";
 import Card from "../../card/Card";
 import "./ExpenseItem.css";
+//import ExpenseNew from "../expense-new/ExpenseNew";
 
-function ExpenseItem(props) {
- 
+  
   // Must be called directly in the sub-component function. 
   // Always returns two elements (1st - current state value, 2nd - updating the value)
 
-  const [title, setTitle] = useState(props.title); 
-  console.log('ExpenseItem evaluated');
-  const onClickHandler = () => {setTitle('Updated!');};
-  console.log(title)
+const ExpenseItem = (props) => {
+ //function clickHandler() {}
 
+  const [title, setTitle] = useState(props.title);
+  console.log('Expense Item') 
+  const onClickHandler = () => {setTitle('Updated!');
+  console.log(title);
+};
+ 
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -28,4 +32,4 @@ function ExpenseItem(props) {
   );
 }
 
-export default ExpenseItem;
+export default ExpenseItem

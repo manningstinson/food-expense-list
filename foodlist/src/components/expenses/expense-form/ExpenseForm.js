@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
+//import ExpenseNew from "../expense-new/ExpenseNew";
 import "./ExpenseForm.css";
 //import TextField from "@mui/material/TextField";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -34,7 +35,7 @@ const ExpenseForm = () => {
       restaurant: enteredRestaurant,
     };
 
-    console.log(expenseData);
+    props.onSaveExpenseData(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');

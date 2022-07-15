@@ -33,15 +33,18 @@ function App() {
       date: new Date(2022, 1, 5),
     },
   ];
-  
+
+  // const addExpenseHandler = expense => {
+  //   console.log('In App.js');
+  //   console.log(expense);
+  // };
+
   return (
-<div>
-   <Expenses items = {expenses} />
-</div>
-
+    <div>
+    {/* <ExpenseNew onAddExpense={addExpenseHandler} /> */}
+    <Expenses items={expenses} />
+    </div>
   );
-
-
-}
+};
 
 export default App;

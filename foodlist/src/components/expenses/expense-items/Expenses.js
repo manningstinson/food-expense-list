@@ -32,8 +32,7 @@ function Expenses(props) {
             amount={props.items[3].amount}
             restaurant={props.items[3].restaurant}
             date={props.items[3].date}
-          ></ExpenseItem>
-         
+          ></ExpenseItem> 
         </Card>
       );
 }
