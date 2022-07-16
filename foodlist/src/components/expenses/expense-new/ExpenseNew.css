@@ -21,10 +21,10 @@
   font-size: 1rem;
   width: 35rem;
   border: 1px solid #eee;
-  padding: 1rem;
+  padding: 1.7rem;
   flex-direction: column;
   background: #fff;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .expense__motivation__section {
@@ -45,7 +45,7 @@
 .new-expense button {
   font: inherit;
   cursor: pointer;
-  padding: 1rem 2rem;
+  padding: .5rem 2rem;
   border: 1px solid #28b8e0;
   background-color: #28b8e0;
   color: white;

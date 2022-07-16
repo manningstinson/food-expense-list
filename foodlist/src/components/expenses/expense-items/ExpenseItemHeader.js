@@ -7,10 +7,7 @@ import ExpenseNew from "../expense-new/ExpenseNew";
 
 function ExpenseItemHeader() {
 
-const addExpenseHandler = expense => {
-        console.log('In App.js');
-        console.log(expense);
-      };
+const addExpenseHandler = expense => {};
 
   return (
     <Card className="expense-item-header">
