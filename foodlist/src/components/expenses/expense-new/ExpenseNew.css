@@ -13,6 +13,8 @@
 
 
 
+  
+
 .expense__add_new-expense {
   display: flex;
   color: #333;
@@ -20,27 +22,12 @@
   /* width: 74rem; */
   font-size: 1rem;
   width: 35rem;
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
   padding: 1.7rem;
   flex-direction: column;
   background: #fff;
   border-radius: 10px;
 }
-
-.expense__motivation__section {
-  display: flex;
-  color: #333;
-  margin: 1rem 0rem 1rem 50rem;
-  /* width: 74rem; */
-  font-size: 1rem;
-  width: 20rem;
-  border: 1px solid #eee;
-  padding: 1rem;
-  flex-direction: column;
-  background: #fff;
-  border-radius:10px;
-}
-
 
 .new-expense button {
   font: inherit;

@@ -12,10 +12,10 @@ html {
 
 body {
 
-  background-color: #ffffff;
+  background-color: #fff;
   font: weight 700px;
-  
- 
+}
 
-
+.wrapper {
+  background-color: #fafafa;
 }

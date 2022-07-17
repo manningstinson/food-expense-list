@@ -1,6 +1,11 @@
 .card {
 
-   background-color: #fafafa;
-   border-radius: 10px;
+      border-radius: 10px;
    
+}
+
+.wrapper {
+   background-color: #fafafa;
+   padding: 3rem;
+   border-radius: 10px;
 }

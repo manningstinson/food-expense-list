@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import ExpenseItem from "./ExpenseItem";
+//import ExpenseItem from "./ExpenseItem";
 import Card from "../../card/Card";
 import ExpensesFilter from "../expense-filter/ExpenseFilter";
 import "./Expenses.css";
 import ExpensesList from "../expense-list/ExpenseList"
+import ExpenseChart from "../expense-chart/ExpenseChart";
 //import Chart from "../expense-chart/ExpenseChart";
 
 //import ExpensesFilter from "../expense-filter/ExpenseFilter";
@@ -15,38 +16,34 @@ const Expenses = (props) => {
   };
 
   const filteredExpenses = props.items.filter((expense) => {
-   return expense.date.getFullYear().toString() ===filteredYear;
+    return expense.date.getFullYear().toString() === filteredYear;
   });
 
-    //return expense.date.getFullYear().toString() === filteredYear;
   
+  // if (filteredExpenses.length > 0) {
+  //   expenseContent = filteredExpenses.map((expense) => (
+  //     <ExpenseItem
+  //       key={expense.id}
+  //       title={expense.title}
+  //       amount={expense.amount}
+  //       date={expense.date}
+  //       restaurant={expense.restaurant}
+  //     />
+  //   ));
+  // }
 
-  let expenseContent = <p>No expenses found.</p>;
-
-  if (filteredExpenses.length > 0) {
-    expenseContent = filteredExpenses.map((expense) => (
-      <ExpenseItem
-        key={expense.id}
-        title={expense.title}
-        amount={expense.amount}
-        date={expense.date}
-        restaurant={expense.restaurant}
-      />
-    ));
-  }
-
-    return (
-      <div>
-        <Card className='expenses'>
-          <ExpensesFilter
-            selected={filteredYear}
-            onChangeFilter={filterchangehandler}
-          />
-          {/* <ExpensesChart expenses={filteredExpenses} /> */}
-          <ExpensesList items={filteredExpenses} />
-        </Card>
-      </div>
-    );
-  };
+  return (
+    <div>
+      <Card className='expenses'>
+        <ExpensesFilter
+          selected={filteredYear}
+          onChangeFilter={filterchangehandler}
+        />
+        <ExpenseChart expenses={filteredExpenses} />
+        <ExpensesList items={filteredExpenses} />
+      </Card>
+    </div>
+  );
+};
   
   export default Expenses;
