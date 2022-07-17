@@ -9,4 +9,4 @@ function LogoMain() {
   );
 }
 
-export default LogoMain
+export default LogoMain;

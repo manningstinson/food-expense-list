@@ -1,14 +1,14 @@
-import React from "react";
+
 import { useState } from "react";
-//import ExpenseNew from "../expense-new/ExpenseNew";
 import "./ExpenseForm.css";
+
 //import TextField from "@mui/material/TextField";
 
 const ExpenseForm = (props) => {
-  const [enteredTitle, setEnteredTitle] = useState("");
-  const [enteredAmount, setEnteredAmount] = useState("");
-  const [enteredDate, setEnteredDate] = useState("");
-  const [enteredRestaurant, setEnteredRestaurant] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState('');
+  const [enteredAmount, setEnteredAmount] = useState('');
+  const [enteredDate, setEnteredDate] = useState('');
+  const [enteredRestaurant, setEnteredRestaurant] = useState('');
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -30,9 +30,9 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
-      date: enteredDate,
-      restaurant: enteredRestaurant,
+      amount: +enteredAmount,
+      date: new Date(enteredDate),
+      restaurant: enteredRestaurant
     };
 
     props.onSaveExpenseData(expenseData);
@@ -44,7 +44,7 @@ const ExpenseForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <p>Pleas enter your expenses here.</p>
+      <p>Please enter your expenses here.</p>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>

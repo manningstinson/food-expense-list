@@ -15,17 +15,30 @@
   .expenses-filter label {
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color:#333;
-    margin-left:50rem;
-    margin-top:.5rem;
-  }
-  
+    color: #333;
+    margin-left: 0rem;
+    margin-top: 0.5rem;
+    font: 300;
+    font-size: 1.2rem;
+    margin-left: 45rem;
+}
+
+
   .expenses-filter select {
     font: inherit;
     padding: 0.5rem 3rem;
+    margin-left:0rem;
     font-weight: bold;
     border-radius: 6px;
     border: 1px solid #eee;
 }
 
-  
+
+.expenses-filter__control {
+  display: flex;
+  /* width: 3%; */
+  align-items: right;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
