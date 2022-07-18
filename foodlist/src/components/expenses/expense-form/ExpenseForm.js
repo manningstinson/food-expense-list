@@ -31,7 +31,7 @@ const ExpenseForm = (props) => {
     const expenseData = {
       title: enteredTitle,
       amount: +enteredAmount,
-      date: new Date(enteredDate),
+      date: new Date(enteredDate + 'T00:00:00'),
       restaurant: enteredRestaurant
     };
 
@@ -47,14 +47,14 @@ const ExpenseForm = (props) => {
       <p>Please enter your expenses here.</p>
       <div className="new-expense__controls">
         <div className="new-expense__control">
-          <label>Title</label>
+          <label>Food</label>
           <input type="text" 
           value={enteredTitle}
           onChange={titleChangeHandler} />
         </div>
 
         <div className="new-expense__control">
-          <label>Amount</label>
+          <label>Amount($)</label>
           <input
             type="number"
             min="0.01"
